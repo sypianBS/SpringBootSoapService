@@ -4,7 +4,7 @@ xmlns:tns="http://www.bensypianskinamespace.com"
 targetNamespace = "http://www.bensypianskinamespace.com"
 >
 
-	<xs:element name="getStudent">
+	<xs:element name="getStudentRequest">
 	  <xs:complexType>
 	    <xs:sequence>
 	      <xs:element name="id" type="xs:long"/>
@@ -12,13 +12,29 @@ targetNamespace = "http://www.bensypianskinamespace.com"
 	  </xs:complexType>
 	</xs:element>
 	
-	<xs:element name="getResponse">
+	<xs:element name="getStudentResponse">
 	  <xs:complexType>
 	    <xs:sequence>
 	      <xs:element name="student" type="tns:student"/>
 	    </xs:sequence>
 	  </xs:complexType>
 	</xs:element>
+	
+	<xs:element name="getNumberOfStudentsRequest">
+		<xs:complexType>
+	   		<xs:sequence>
+	    	</xs:sequence>
+	  </xs:complexType>
+	</xs:element>
+	
+	<xs:element name="getNumberOfStudentsResponse">
+	  <xs:complexType>
+	    <xs:sequence>
+	      <xs:element name="numberOfStudents" type="xs:long"/>
+	    </xs:sequence>
+	  </xs:complexType>
+	</xs:element>
+	
 	
 	<xs:complexType name="student">
 	    <xs:sequence>

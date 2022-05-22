@@ -2,11 +2,11 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2022.05.14 um 12:46:41 PM CEST 
+// Generiert: 2022.05.22 um 11:54:00 AM CEST 
 //
 
 
-package com;
+package com.example.demo.student.schemeOutput;
 
 import javax.xml.bind.annotation.XmlRegistry;
 
@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlRegistry;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the com.suapwebs.xjc package. 
+ * generated in the com.studentSchemeOutput.xjc package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -30,18 +30,18 @@ public class ObjectFactory {
 
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.suapwebs.xjc
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.studentSchemeOutput.xjc
      * 
      */
     public ObjectFactory() {
     }
 
     /**
-     * Create an instance of {@link GetResponse }
+     * Create an instance of {@link GetStudentResponse }
      * 
      */
-    public GetResponse createGetResponse() {
-        return new GetResponse();
+    public GetStudentResponse createGetStudentResponse() {
+        return new GetStudentResponse();
     }
 
     /**
@@ -53,11 +53,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetStudent }
+     * Create an instance of {@link GetStudentRequest }
      * 
      */
-    public GetStudent createGetStudent() {
-        return new GetStudent();
+    public GetStudentRequest createGetStudentRequest() {
+        return new GetStudentRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetNumberOfStudentsResponse }
+     * 
+     */
+    public GetNumberOfStudentsResponse createGetNumberOfStudentsResponse() {
+        return new GetNumberOfStudentsResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetNumberOfStudentsRequest }
+     * 
+     */
+    public GetNumberOfStudentsRequest createGetNumberOfStudentsRequest() {
+        return new GetNumberOfStudentsRequest();
     }
 
 }

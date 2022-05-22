@@ -1,13 +1,10 @@
 package com.example.demo.student;
 
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
+import com.example.demo.student.schemeOutput.*;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
-
-import com.GetStudent;
-import com.Student;
-import com.GetResponse;
 
 /* calling with content-type text/xml 
  * <?xml version="1.0" encoding="utf-8"?>
@@ -30,13 +27,22 @@ public class StudentEndpoint {
 		this.studentService = studentService;
 	}
 	
-	@PayloadRoot(namespace = "http://www.bensypianskinamespace.com", localPart = "getStudent")
+	@PayloadRoot(namespace = "http://www.bensypianskinamespace.com", localPart = "getStudentRequest")
 	@ResponsePayload 
-	public GetResponse getStudentById(@RequestPayload GetStudent getStudent) {
+	public GetStudentResponse getStudentById(@RequestPayload GetStudentRequest getStudent) {
 		Student studentById = studentService.getStudentsById(getStudent.getId());
-		GetResponse getResponse = new GetResponse();
+		GetStudentResponse getResponse = new GetStudentResponse();
 		getResponse.setStudent(studentById);
 		return getResponse;
 		
 	}
+	
+	@PayloadRoot(namespace = "http://www.bensypianskinamespace.com", localPart = "getNumberOfStudentsRequest")
+	@ResponsePayload
+	public GetNumberOfStudentsResponse getNumberOfStudents() {
+		GetNumberOfStudentsResponse getResponse = new GetNumberOfStudentsResponse();
+		getResponse.setNumberOfStudents(studentService.getNumberOfStudents());
+		return getResponse;
+	}
+	
 }

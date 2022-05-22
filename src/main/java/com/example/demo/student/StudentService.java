@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
-import com.Student;
+import com.example.demo.student.schemeOutput.*;
 
 @Service
 public class StudentService {
@@ -47,6 +47,10 @@ public class StudentService {
 	
 	public void setStudents(List<Student> students) {
 		this.students = students;
+	}
+	
+	public long getNumberOfStudents() {
+		return this.students.size();
 	}
 
 }
